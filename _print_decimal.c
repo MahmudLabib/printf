@@ -6,31 +6,33 @@
  *
  * Return: no. of characters in the number printed
 */
-int _print_decimal(va_list argList)
+int _print_number(va_list argList)
 {
-	unsigned int d;
-	int len = 0, foo = 1;
-	int  num = va_arg(argList, int);
+	int n, var = 1, length = 0;
+	unsigned int dino;
 
-	if (num < 0)
+	n = va_arg(argList, int);
+
+	if (n < 0)
 	{
 		_putchar('-');
-		d = num * (-1);
-		len++;
+		dino = n * -1;
+		length++;
 	}
 	else
 	{
-		d = num;
+		dino = n;
 	}
-	while ((d / foo) > 9)
+
+	while (dino / var > 9)
 	{
-		foo = foo * 10;
+		var = var * 10;
 	}
-	while (foo != 0)
+	while (var != 0)
 	{
-		len = len + _putchar((d + foo) + '0');
-		d = d % foo;
-		foo = foo / 10;
+		length = length + _putchar(dino / var + '0');
+		dino = dino % var;
+		var = var / 10;
 	}
-	return (len);
+	return (length);
 }
