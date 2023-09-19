@@ -8,31 +8,32 @@
 */
 int _print_decimal(va_list argList)
 {
-	int n, var = 1, length = 0;
-	unsigned int dino;
+	int num, foo = 1;
+	int len = 0;
+	unsigned int d;
 
-	n = va_arg(argList, int);
+	num = va_arg(argList, int);
 
-	if (n < 0)
+	if (num < 0)
 	{
 		_putchar('-');
-		dino = n * -1;
-		length++;
+		d = num * -1;
+		len++;
 	}
 	else
 	{
-		dino = n;
+		d = num;
 	}
 
-	while (dino / var > 9)
+	while (d / foo > 9)
 	{
-		var = var * 10;
+		foo = foo * 10;
 	}
-	while (var != 0)
+	while (foo != 0)
 	{
-		length = length + _putchar(dino / var + '0');
-		dino = dino % var;
-		var = var / 10;
+		len = len + _putchar(d / foo + '0');
+		d = d % foo;
+		foo = foo / 10;
 	}
-	return (length);
+	return (len);
 }
