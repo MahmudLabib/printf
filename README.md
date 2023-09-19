@@ -29,4 +29,4 @@ gcc -Wall -Werror -Wextra -pedantic *.c
 ## Authors
 
 - ***[Mahmoud Labib Sallam](https://github.com/MahmudLabib)***
-- ***[AbdElrahman Mohammed](https://github.com/engakhattab)***
+- ***[AbdElrahman Mohammed Eldemerdash](https://github.com/engakhattab)***
