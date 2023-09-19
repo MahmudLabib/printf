@@ -17,9 +17,8 @@ Specifier | Input example | Output example
 
 ## Compilation
 
-```c
+
 gcc -Wall -Werror -Wextra -pedantic *.c
-````
 
 
 ## Environment
