@@ -8,29 +8,29 @@
 */
 int _print_decimal(va_list argList)
 {
-	int num_chars = 0, foo = 1;
-	int decimal = va_arg(argList, int);
 	unsigned int d;
+	int len = 0, foo = 1;
+	int  num = va_arg(argList, int);
 
-	if (decimal < 0)
+	if (num < 0)
 	{
 		_putchar('-');
-		d = decimal * (-1);
-		num_chars++;
+		d = num * (-1);
+		len++;
 	}
 	else
 	{
-		d = decimal;
+		d = num;
 	}
 	while ((d / foo) > 9)
 	{
-		foo *= 10;
+		foo = foo * 10;
 	}
 	while (foo != 0)
 	{
-		num_chars = num_chars + _putchar((d + foo) + '0');
+		len = len + _putchar((d + foo) + '0');
 		d = d % foo;
 		foo = foo / 10;
 	}
-	return (num_chars);
+	return (len);
 }
