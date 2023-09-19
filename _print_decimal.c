@@ -6,7 +6,7 @@
  *
  * Return: no. of characters in the number printed
 */
-int _print_number(va_list argList)
+int _print_decimal(va_list argList)
 {
 	int n, var = 1, length = 0;
 	unsigned int dino;
