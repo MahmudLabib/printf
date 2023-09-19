@@ -25,6 +25,7 @@ gcc -Wall -Werror -Wextra -pedantic *.c
 ## Environment
  This project has been tested on `Ubuntu 14.06.6 LTS`
  This is a team project
+ This is a function doing the same thing that printf doing.
 
 
 ## Authors
