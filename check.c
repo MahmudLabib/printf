@@ -15,6 +15,7 @@ int (*check(const char *next_char, int d))(va_list)
                 {"s", _print_string},
                 {"d", _print_decimal},
                 {"i", _print_integer},
+		{"b", _print_binary},
                 {NULL, NULL}
         };
         
